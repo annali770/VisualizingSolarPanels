@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Visualizing Solar Panels</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+
+<!-- Body -->
+<body style ="background-color: #bfeaff;" class = "container">
+
+ <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Solar Panels <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown08">
+          <a class="dropdown-item" href="stats.html">Statistics</a>
+          <a class="dropdown-item" href="solarmap.html">Solar Map</a>
+          <a class="dropdown-item" href="bloopers.html">Bloopers</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="traveling.html">Acknowledgements</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<!--Header-->  
+<div class = "jumbotron" style = "padding:2em">
+
+  <h1 class = "display-4">Statistics</h1>
+  <h4 class = "text-muted lead">An analysis of data provided by the Open PV Project, found here: <a href ="https://openpv.nrel.gov/">https://openpv.nrel.gov/.</a></h4>
+  <hr class = "my-4">
+  <h4> <li> Is there a correlation between solar panel density and average household income per zip code in the US? </li></h4>
+  <p> Income data provided by the IRS: <a href ="https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2016-zip-code-data-soi"> https://www.irs.gov/statistics/soi-tax-stats-individual-income-tax-statistics-2016-zip-code-data-soi </a></p>
+  <p> Our team used the Pearson R Test (correlation coefficient) to determine the answer to this question: </p>
+  <div class = "text-center"><img src = "correlationcoefficient.png" ></div>
+  <p> We utilized pandas in Python to view and analyze the data, plugging the relevant variables into the equation. </p>
+  <div class = "text-center"><img src = "dataImage.png"></div>
+  <br><br>
+  <p> Our final result was a correlation coefficient of 0.0000006930699527680761, signifying an extremely low correlation between the two variables. </p>
+  <p> Our team had thought it was intuitive that the higher the average income, the more solar panels there would be in the area. This was due to an assumption that because the cost of solar panels are high, only higher-income areas would have a high density of solar panels. The test suggests that we were wrong, perhaps due to the density of solar panels used for farming and manufacturing, especially in rural areas with space to install them in. </p>
+  <p> Although we found that there was a negligible correlation between average household income and the amount of solar panels installed in the US, this data may be biased/skewed due to a number of variables, such as:
+    <li> date installed (before/after tariffs?) </li>
+    <li> taxes paid on solar panel sale </li>
+    <li> cost of solar panels </li>
+    <li> federal and state laws. </li></p>
+  <p>The full code and steps can be found at our <a href = "https://github.com/annali770/Visualizing-Solar-Panels-Research-Project/blob/master/Solar_Panels.ipynb"> github repository here.</a> </p> 
+    <hr class = "my-4">
+<h4> Next Steps: </h4>
+<li> How much does cost influence consumers in buying solar panels? </li>
+<li> How many solar panels are used in residential areas vs. commercial areas? What do solar panels usually end up powering? </li>
+<li> How has federal/state policy influenced the amount of solar panels being used?</li>
+</div>
+<!-- Descriptions -->
+    <hr class = "my-4">
+ 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
